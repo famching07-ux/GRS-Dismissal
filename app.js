@@ -19,7 +19,39 @@ document.getElementById("studentName").value;
 const grade =
 document.getElementById("grade").value;
 
-alert("Name: " + name);
-alert("Grade: " + grade);
+if (!name) {
+alert("Enter Student Name");
+return;
+}
+
+const url =
+API_URL +
+"?action=addStudent" +
+"&name=" + encodeURIComponent(name) +
+"&grade=" + encodeURIComponent(grade);
+
+alert("Calling API...");
+
+try {
+
+```
+const response = await fetch(url);
+
+const text = await response.text();
+
+alert("API Response:");
+alert(text);
+```
+
+} catch(err) {
+
+```
+console.error(err);
+
+alert("ERROR:");
+alert(err);
+```
+
+}
 
 }
