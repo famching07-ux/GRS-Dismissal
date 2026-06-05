@@ -1,63 +1,74 @@
-alert("APP LOADED");
-console.log("APP.JS LOADED");
 const API_URL =
 "https://script.google.com/a/macros/goldencharter.org/s/AKfycbwJFGxjlBKn9Sw783Aw6J4In9lae6_763_wGTdJJKcCwLWyTtYxzYi5cIHULDmuew-P/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  console.log("DOM LOADED");
+const btn =
+document.getElementById("addStudentBtn");
 
-  const btn =
-    document.getElementById("addStudentBtn");
+if (btn) {
 
-  console.log("BUTTON:", btn);
+```
+btn.addEventListener(
+  "click",
+  addStudent
+);
+```
 
-  if (btn) {
-
-    console.log("EVENT ATTACHED");
-
-    btn.addEventListener(
-      "click",
-      addStudent
-    );
-  }
+}
 });
 
 async function addStudent() {
 
-  alert("Button Clicked");
+const name =
+document.getElementById("studentName").value;
 
-  const name =
-    document.getElementById("studentName").value;
+const grade =
+document.getElementById("grade").value;
 
-  const grade =
-    document.getElementById("grade").value;
+if (!name) {
+alert("Enter Student Name");
+return;
+}
 
-  alert("Name = " + name);
-  alert("Grade = " + grade);
+const url =
+API_URL +
+"?action=addStudent" +
+"&name=" + encodeURIComponent(name) +
+"&grade=" + encodeURIComponent(grade);
 
-  const url =
-    API_URL +
-    "?action=addStudent" +
-    "&name=" + encodeURIComponent(name) +
-    "&grade=" + encodeURIComponent(grade);
+try {
 
-  alert(url);
+```
+const response =
+  await fetch(url);
 
-  try {
+const data =
+  await response.json();
 
-    const response = await fetch(url);
+if (data.success) {
 
-    alert("Fetch Returned");
+  alert("Student Added");
 
-    const text = await response.text();
+  document.getElementById(
+    "studentName"
+  ).value = "";
 
-    alert(text);
+} else {
 
-  } catch(err) {
+  alert(data.message);
+}
+```
 
-    alert("ERROR: " + err);
+} catch(err) {
 
-    console.error(err);
-  }
+```
+console.error(err);
+
+alert(
+  "Unable to reach API"
+);
+```
+
+}
 }
