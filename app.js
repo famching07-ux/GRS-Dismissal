@@ -3,55 +3,51 @@ const API_URL =
 
 document.addEventListener("DOMContentLoaded", () => {
 
-const btn = document.getElementById("addStudentBtn");
+  const btn = document.getElementById("addStudentBtn");
 
-if (btn) {
-btn.addEventListener("click", addStudent);
-}
+  if (btn) {
+    btn.addEventListener("click", addStudent);
+  }
 
 });
 
 async function addStudent() {
 
-const name =
-document.getElementById("studentName").value;
+  const name =
+    document.getElementById("studentName").value;
 
-const grade =
-document.getElementById("grade").value;
+  const grade =
+    document.getElementById("grade").value;
 
-if (!name) {
-alert("Enter Student Name");
-return;
-}
+  if (!name) {
+    alert("Enter Student Name");
+    return;
+  }
 
-const url =
-API_URL +
-"?action=addStudent" +
-"&name=" + encodeURIComponent(name) +
-"&grade=" + encodeURIComponent(grade);
+  const url =
+    API_URL +
+    "?action=addStudent" +
+    "&name=" + encodeURIComponent(name) +
+    "&grade=" + encodeURIComponent(grade);
 
-alert("Calling API...");
+  alert("Calling API...");
 
-try {
+  try {
 
-```
-const response = await fetch(url);
+    const response = await fetch(url);
 
-const text = await response.text();
+    const text = await response.text();
 
-alert("API Response:");
-alert(text);
-```
+    alert("API Response:");
+    alert(text);
 
-} catch(err) {
+  } catch(err) {
 
-```
-console.error(err);
+    console.error(err);
 
-alert("ERROR:");
-alert(err);
-```
+    alert("ERROR:");
+    alert(err);
 
-}
+  }
 
 }
