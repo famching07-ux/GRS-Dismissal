@@ -1,44 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const loginBtn =
-document.getElementById("loginBtn");
+  const loginBtn =
+    document.getElementById("loginBtn");
 
-if (loginBtn) {
+  if (loginBtn) {
 
-```
-loginBtn.addEventListener(
-  "click",
-  login
-);
-```
+    loginBtn.addEventListener(
+      "click",
+      login
+    );
 
-}
+  }
 
 });
 
 async function login() {
 
-const username =
-document.getElementById("username").value;
+  const username =
+    document.getElementById("username").value;
 
-const password =
-document.getElementById("password").value;
+  const password =
+    document.getElementById("password").value;
 
-if (!username || !password) {
+  if (!username || !password) {
 
-```
-alert(
-  "Please enter username and password."
-);
+    alert(
+      "Please enter username and password."
+    );
 
-return;
-```
+    return;
 
-}
+  }
 
-alert(
-"Username: " + username +
-"\nPassword: " + password
-);
+  alert(
+    "Username: " + username +
+    "\nPassword: " + password
+  );
 
 }
