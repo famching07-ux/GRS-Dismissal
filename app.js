@@ -3,18 +3,10 @@ const API_URL =
 
 document.addEventListener("DOMContentLoaded", () => {
 
-const btn =
-document.getElementById("addStudentBtn");
+const btn = document.getElementById("addStudentBtn");
 
 if (btn) {
-
-```
-btn.addEventListener(
-  "click",
-  addStudent
-);
-```
-
+btn.addEventListener("click", addStudent);
 }
 
 });
@@ -30,47 +22,4 @@ document.getElementById("grade").value;
 alert("Name: " + name);
 alert("Grade: " + grade);
 
-}
-
-
-const url =
-API_URL +
-"?action=addStudent" +
-"&name=" + encodeURIComponent(name) +
-"&grade=" + encodeURIComponent(grade);
-
-try {
-
-```
-const response =
-  await fetch(url);
-
-const data =
-  await response.json();
-
-if (data.success) {
-
-  alert("Student Added");
-
-  document.getElementById(
-    "studentName"
-  ).value = "";
-
-} else {
-
-  alert(data.message);
-}
-```
-
-} catch(err) {
-
-```
-console.error(err);
-
-alert(
-  "Unable to reach API"
-);
-```
-
-}
 }
