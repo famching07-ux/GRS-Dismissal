@@ -27,14 +27,11 @@ document.getElementById("studentName").value;
 const grade =
 document.getElementById("grade").value;
 
-if (!name) {
-alert("Enter Student Name");
-return;
-}
-
-alert("Button Working");
+alert("Name: " + name);
+alert("Grade: " + grade);
 
 }
+
 
 const url =
 API_URL +
