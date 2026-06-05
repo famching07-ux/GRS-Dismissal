@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GRS Dismissal - Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <div class="sidebar">
+
+    <img src="logo.png" class="sidebar-logo">
+
+    <h2>ADMIN</h2>
+
+    <button>🏠 Dashboard</button>
+
+    <button onclick="showPage('students')">
+  ➕ Students
+</button>
+
+    <button>🖨 Print Tags</button>
+
+    <button>📷 Scan QR</button>
+
+    <button>📋 Live Queue</button>
+
+    <button>📊 Reports</button>
+
+    <button>⚙ Staff</button>
+
+  </div>
+
+  <div class="content">
+
+  <div id="students-page">
+
+    <h1>Student Management</h1>
+
+    <div class="card">
+
+      <h3>Add Student</h3>
+
+      <input
+        type="text"
+        id="studentName"
+        placeholder="Student Name">
+
+      <select id="grade">
+
+        <option>PK3</option>
+        <option>PK4</option>
+        <option>Kinder</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+
+      </select>
+
+      <button id="addStudentBtn" onclick="alert('BUTTON WORKS')">
+  Add Student
+</button>
+
+    </div>
+
+    <div class="card">
+
+      <h3>CSV Upload</h3>
+
+      <input type="file" id="csvFile">
+
+      <button>
+        Upload CSV
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <h1>GRS Dismissal</h1>
+
+    <h2>Administrator Dashboard</h2>
+
+    <p>
+      Welcome to GRS Dismissal.
+    </p>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
