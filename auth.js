@@ -1,23 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const loginBtn =
-    document.getElementById("loginBtn");
+const loginBtn =
+document.getElementById("loginBtn");
 
-  if (loginBtn) {
+if (loginBtn) {
 
-    loginBtn.addEventListener(
-      "click",
-      login
-    );
+```
+loginBtn.addEventListener(
+  "click",
+  login
+);
+```
 
-  }
+}
 
 });
 
 async function login() {
 
-  alert(
-    "Next step: Google Login"
-  );
+const username =
+document.getElementById("username").value;
+
+const password =
+document.getElementById("password").value;
+
+if (!username || !password) {
+
+```
+alert(
+  "Please enter username and password."
+);
+
+return;
+```
+
+}
+
+alert(
+"Username: " + username +
+"\nPassword: " + password
+);
 
 }
