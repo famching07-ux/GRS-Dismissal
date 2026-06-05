@@ -18,14 +18,14 @@ body {
 
 .login-container {
 
-  width: 700px;
-  max-width: 90%;
+  width: 650px;
+  max-width: 85%;
 
   background: white;
 
   border-radius: 30px;
 
-  padding: 50px;
+  padding: 30px 50px;
 
   text-align: center;
 
@@ -54,31 +54,31 @@ body {
 
 .logo {
 
-  width: 260px;
+  width: 180px;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .main-title {
 
-  font-size: 72px;
+  font-size: 56px;
 
   font-weight: bold;
 
   color: #b3002d;
 
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .school-name {
 
   color: #0033a0;
 
-  font-size: 32px;
+  font-size: 26px;
 
   font-weight: bold;
 
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .divider {
@@ -121,14 +121,14 @@ body {
 
   border: none;
 
-  width: 500px;
+  width: 420px;
   max-width: 90%;
 
-  height: 90px;
+  height: 75px;
 
   border-radius: 12px;
 
-  font-size: 24px;
+  font-size: 22px;
 
   cursor: pointer;
 
@@ -173,9 +173,9 @@ body {
 
 .footer {
 
-  margin-top: 60px;
+  margin-top: 35px;
 
   color: #666;
 
-  font-size: 18px;
+  font-size: 16px;
 }
