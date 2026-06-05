@@ -16,6 +16,7 @@ btn.addEventListener(
 ```
 
 }
+
 });
 
 async function addStudent() {
@@ -29,6 +30,10 @@ document.getElementById("grade").value;
 if (!name) {
 alert("Enter Student Name");
 return;
+}
+
+alert("Button Working");
+
 }
 
 const url =
